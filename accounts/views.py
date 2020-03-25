@@ -2,8 +2,8 @@
 from django.shortcuts import render, reverse, redirect
 # additional django library
 from django.contrib import auth, messages
-# form imported from forms.py file
-from accounts.forms import loginForm
+# forms imported from forms.py file
+from accounts.forms import loginForm, registrationForm
 # additional library to stop unauthorised use of functions
 from django.contrib.auth.decorators import login_required
 
@@ -37,10 +37,11 @@ def login(request):
             else:
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
-        login_form = loginForm()
+        login_form = loginForm()    # creates an instance of the form
     return render(request, 'login.html', {'login_form': login_form})    # form passed in for rendering to page
 
 
 # function for registration
 def register(request):
-    return render(request, 'register.html')
+    registration_form = registrationForm()  # creates an instance of the form
+    return render(request, 'register.html', {'registration_form':registration_form})
