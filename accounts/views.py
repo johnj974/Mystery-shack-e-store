@@ -40,3 +40,7 @@ def login(request):
         login_form = loginForm()
     return render(request, 'login.html', {'login_form': login_form})    # form passed in for rendering to page
 
+
+# function for registration
+def register(request):
+    return render(request, 'register.html')
