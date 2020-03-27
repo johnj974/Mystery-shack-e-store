@@ -3,6 +3,7 @@
 {% block title %}Registration{% endblock %}
 
 {% block content %}
+<hr>
     <form method="post">
 		{% csrf_token %}
 		{{ registration_form.as_p }}
