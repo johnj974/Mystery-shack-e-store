@@ -6,6 +6,8 @@ from django.contrib import auth, messages
 from accounts.forms import loginForm, UserRegistrationForm
 # additional library to stop unauthorised use of functions
 from django.contrib.auth.decorators import login_required
+# importing user model
+from django.contrib.auth.models import User
 
 
 # function to render index page
@@ -43,7 +45,6 @@ def login(request):
 
 # function for registration
 def registration(request):
-    """Render the registration page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
 
@@ -64,3 +65,10 @@ def registration(request):
         registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
         "registration_form": registration_form})
+
+
+# user profile view
+def user_profile(request):
+    user = User.objects.get(email=request.user.email)
+    return render(request, 'profile.html', {'profile':user})
+
