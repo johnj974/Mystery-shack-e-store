@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',     
+    'accounts',
+    'django_forms_bootstrap'    
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+# a list of the files where static files can populate
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # setting to enable messages in views
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
