@@ -11,7 +11,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 
 
-
 # function to render index page
 def index(request):
     return render(request, 'index.html')
