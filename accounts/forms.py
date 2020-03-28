@@ -36,16 +36,24 @@ def clean_email(self):
         raise forms.ValidationError(u'Email address must be unique')
     return email
 
+
 # password validation
 def clean_password2(self):
     password1 = self.cleaned_data.get('password1')
     password2 = self.cleaned_data.get('password2')
 
-        
     if not password1 or not password2:
         raise ValidationError("Please confirm your password")
-        
     if password1 != password2:
         raise ValidationError("Passwords must match")
-        
     return password2
+
+
+"""class UserRegistrationForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2', ]"""
