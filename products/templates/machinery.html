@@ -3,5 +3,13 @@
 {% block title %}Machinery{% endblock %}
 
 {% block content %}
-<p>this page is linked</p>
+<div class="row">
+	{% for machine in machinery %}
+	<div class="col-sm-3">
+		<p>{{ machinery.name }}</p>
+		<p>Price: {{ machinery.price }}</p>
+	</div>
+    {% endfor %}
+</div>
+<p> still linked i hope</p>
 {% endblock %}
