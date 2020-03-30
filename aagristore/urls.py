@@ -22,7 +22,7 @@ from accounts.views import index, logout, login, registration, user_profile
 # imported urls from products app
 from products import urls as urls_products
 # import the view function
-from products.views import all_machinery, Machinery
+from products.views import all_machinery, search
 # import the media root from settings
 from .settings import MEDIA_ROOT
 # import cart functions
@@ -38,7 +38,8 @@ urlpatterns = [
     url(r'^accounts/profile/$', user_profile, name='profile'),
     url(r'^products/', include(urls_products)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
-    #url(r'^cart/', cart, name='cart'),
+    # url(r'^cart/', cart, name='cart'),
     url(r'cart/', include(urls_cart)),
-    #url(r'^$', all_machinery, name='Macinery'),
+    # url(r'^$', all_machinery, name='Macinery'),
+    url(r'^search/', search, name='search'),
 ]

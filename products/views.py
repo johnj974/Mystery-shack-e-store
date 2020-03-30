@@ -9,4 +9,10 @@ def all_machinery(request):
     return render(request, 'machinery.html', {'machinery': machinery})
 
 
+# a search function to search for items
+def search(request):
+    products = Machinery.objects.filter(name_icontains=request.GET['q'])
+    return render(request, 'machinery.html', {'products':products})
+
+
 
