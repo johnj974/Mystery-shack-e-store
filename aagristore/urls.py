@@ -28,6 +28,7 @@ from .settings import MEDIA_ROOT
 # import cart functions
 from cart.views import cart
 from cart import urls as urls_cart
+from checkout.views import checkout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -42,4 +43,5 @@ urlpatterns = [
     url(r'cart/', include(urls_cart)),
     # url(r'^$', all_machinery, name='Macinery'),
     url(r'^search/', search, name='search'),
+    url(r'^checkout/', checkout, name='checkout')
 ]
