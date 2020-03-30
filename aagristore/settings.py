@@ -66,7 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', # added to handle media images
+                'django.template.context_processors.media',  # added to handle media images
             ],
         },
     },
@@ -104,10 +104,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'accounts.backends.CaseInsensitive'
-]
+#AUTHENTICATION_BACKENDS = [
+#    'django.contrib.auth.backends.ModelBackend',
+#    'accounts.backends.CaseInsensitiveAuth'
+#]
+
+#AUTHENTICATION_BACKENDS = [
+#    'django.contrib.auth.backends.ModelBackend',
+#    'accounts.backends.EmailAuth',
+#]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

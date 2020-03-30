@@ -6,8 +6,9 @@
 <div class="row">
 	{% for machine in machinery %}
 	<div class="col-sm-3">
-		<p>{{ machinery.name }}</p>
-		<p>Price: {{ machinery.price }}</p>
+		<p>{{ machine.name }}</p>
+        <p>Description: {{ product.description }}</p>
+		<p>Price: {{ machine.price }}</p>
 	</div>
     {% endfor %}
 </div>
