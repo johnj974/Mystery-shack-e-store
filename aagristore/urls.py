@@ -28,12 +28,12 @@ from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    #url(r'^$', index, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^accounts/logout/$', logout, name='logout'),
     url(r'^accounts/login/$', login, name='login'),
     url(r'^accounts/register/$', registration, name='registration'),
     url(r'^accounts/profile/$', user_profile, name='profile'),
     url(r'^products/', include(urls_products)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
-    url(r'^$', all_machinery, name='Macinery'),
+    #url(r'^$', all_machinery, name='Macinery'),
 ]
