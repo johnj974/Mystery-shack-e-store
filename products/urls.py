@@ -4,5 +4,5 @@ from django.conf.urls import url, include
 from .views import all_machinery
 
 urlpatterns = [
-    url('^%', all_machinery, name='machinery')
+    url('^$', all_machinery, name='machinery')
 ]
