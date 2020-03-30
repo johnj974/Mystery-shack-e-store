@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',  # added to handle media images
+                'cart.contexts.cart_contents', # added to enable showing of cart on all pages
             ],
         },
     },

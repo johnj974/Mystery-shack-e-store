@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
+{% load bootstrap_tags %}
 {% block title %}Machinery{% endblock %}
 
 {% block content %}
 <div class="row">
 	{% for machine in machinery %}
 	<div class="col-sm-3">
-		<p>{{ machine.name }}</p>
+		<p>Type: {{ machine.name }}</p>
+        <p>Manufacturer: {{ machine.manufacturer }}</p>
         <p>Description: {{ machine.description }}</p>
 		<p>Price: {{ machine.price }}</p>
 	</div>
