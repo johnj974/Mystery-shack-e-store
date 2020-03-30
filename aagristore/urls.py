@@ -25,6 +25,8 @@ from products import urls as urls_products
 from products.views import all_machinery, Machinery
 # import the media root from settings
 from .settings import MEDIA_ROOT
+# import cart functions
+from cart.views import cart
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -35,5 +37,6 @@ urlpatterns = [
     url(r'^accounts/profile/$', user_profile, name='profile'),
     url(r'^products/', include(urls_products)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
+    url(r'^cart/', cart, name='cart'),
     #url(r'^$', all_machinery, name='Macinery'),
 ]
