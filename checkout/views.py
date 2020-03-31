@@ -19,7 +19,7 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required
 def checkout(request):
-    if request.method=="POST":
+    if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = PaymentForm(request.POST)
 
@@ -30,12 +30,25 @@ def checkout(request):
         cart = request.session.get('cart',{})
         total = 0
         for id, quantity in cart.items():
-            product = get_object_or_404(Machinery,pk=id)
+            product = get_object_or_404(Machinery, pk=id)
             total += quantity * product.price
             order_item = OrderItem(
-                order = order,
-                product = product,
-                quantity = quantity
+                order=order,
+                product=product,
+                quantity=quantity
             )
             order_item.save()
     
+        try:
+            customer = stripe.Charge.create(
+                amount = int(total * 100),
+                currency = "EUR",
+                description = request.user.email,
+                card = payment_form.cleaned_data['stripe_id'],
+            )
+        except stripe.error.CardError:
+            messages.error(request, "You card was declined")
+        if customer.paid:
+            messages.error(request, "Payment has been accepted")
+            request.session["cart"] = {}
+            return redirect(reverse("products"))
