@@ -9,7 +9,7 @@ class Order(models.Model):
     address2 = models.CharField(max_length=50, blank=True)
     town_or_city = models.CharField(max_length=20, blank=False)
     county = models.CharField(max_length=20, blank=False)
-    country = models.CharField(max_length=30, blank=False)
+    eir_code = models.CharField(max_length=10, blank=False)
     contact_number = models.IntegerField(blank=False)
     date = models.DateField()
 
