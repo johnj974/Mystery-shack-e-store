@@ -11,6 +11,7 @@ def view_cart(request):
     return render(request, "cart.html")
 
 
+# add a quantity to our product
 def add_to_cart(request, id):
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
@@ -19,6 +20,7 @@ def add_to_cart(request, id):
     return redirect(reverse('index'))
 
 
+# adjust the quantity of a specified product
 def adjust_cart(request, id):
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
