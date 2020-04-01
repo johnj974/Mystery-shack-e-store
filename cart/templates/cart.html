@@ -5,13 +5,32 @@
 
 {% block content %}
 <div class="row">
-	{% for machine in machinery %}
-	<div class="col-sm-3">
-		<p>{{ machine.name }}</p>
-        <p>Description: {{ machine.description }}</p>
-		<p>Price: {{ machine.price }}</p>
+	{% for item in cart_items %}
+	<div class="col">
+		<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+		<div>
+			<p>{{ item.product.name }}</p>
+			<p>Description: {{ item.product.description }}</p>
+			<p>Price: {{ item.product.price }}</p>
+
+			<form class="form-inline" method="POST" action="url 'adjust_cart' item.id %}">
+				{% csrf_token %}
+				<div>
+					<label for="exampleInputAmount" class="sr-only">New Qty</label>
+					<div class="input-group-addon">Qty</div>
+					<input name="quantity" type="number" min="0" max="999" class="form-control">
+					<div class="input-group-addon">{{ item.quantity }}</div>
+				</div>
+            <button type="submit" class="btn btn-primary">Amend</button>
+            </form>
+		</div>
 	</div>
-    {% endfor %}
+	{% endfor %}
+</div>
+<div class="row">
+    <p>Total</p>
+    <p>{{ total }}</p>
+    <a href="/" class="btn btn-success" role="button">Checkout</a>
 </div>
 <p> cart i hope </p>
 {% endblock %}
