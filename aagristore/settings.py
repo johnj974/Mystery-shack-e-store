@@ -138,7 +138,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # a list of the files where static files can populate
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # setting to enable messages in views
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"

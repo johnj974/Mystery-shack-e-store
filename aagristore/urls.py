@@ -45,6 +45,7 @@ urlpatterns = [
     # url(r'^cart/', cart, name='cart'),
     url(r'cart/', include(urls_cart)),
     # url(r'^$', all_machinery, name='Macinery'),
-    url(r'^search/', search, name='search'),
+    #url(r'^search/', search, name='search'),
     url(r'^checkout/', include(urls_checkout)),
+    url(r'^search/', include(urls_products)),
 ]

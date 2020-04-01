@@ -25,7 +25,11 @@
             <li><a href="{% url 'login' %}">Login</a></li>
 			<li><a href="{% url 'registration' %}">Register</a></li>
 			{% endif %}
-            <li><a href="{% url 'view_cart' %}">Cart</a></li>
+            <li><a href="{% url 'view_cart' %}">Cart
+            {% if product_count > 0 %}
+            <label class="badge badge-warning">{{ product_count }}</label>
+            {% endif %}
+            </a></li>
 		</ul>
 	</nav>
 	{% if messages %}
@@ -36,7 +40,7 @@
 	</div>
 	{% endif %}
     <div>
-        <form action="{url 'search'}" meethod="GET">
+        <form action="{url 'search'}" method="GET">
             <input type="text" name="q">
             <button type="submit">Search</button>
         </form>
