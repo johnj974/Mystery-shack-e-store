@@ -29,15 +29,17 @@ from .settings import MEDIA_ROOT
 from cart.views import cart
 from cart import urls as urls_cart
 from checkout import urls as urls_checkout
+from accounts import urls as urls_accounts
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', all_machinery, name='index'),
-    url(r'^accounts/logout/$', logout, name='logout'),
-    url(r'^accounts/login/$', login, name='login'),
-    url(r'^accounts/register/$', registration, name='registration'),
-    url(r'^accounts/profile/$', user_profile, name='profile'),
+    url(r'^accounts/', include(urls_accounts)),
+    #url(r'^accounts/logout/$', logout, name='logout'),
+    #url(r'^accounts/login/$', login, name='login'),
+    #url(r'^accounts/register/$', registration, name='registration'),
+    #url(r'^accounts/profile/$', user_profile, name='profile'),
     url(r'^products/', include(urls_products)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     # url(r'^cart/', cart, name='cart'),
