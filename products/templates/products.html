@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-{% block title %}Machinery{% endblock %}
+{% block title %}Products{% endblock %}
 
 {% block content %}
 <div class="row">
-	{% for machine in machinery %}
-	<div class="col-sm-3">
-		<p>Type: {{ machine.name }}</p>
-        <p>Manufacturer: {{ machine.manufacturer }}</p>
-        <p>Description: {{ machine.description }}</p>
-		<p>Price: {{ machine.price }}</p>
+	{% for product in products %}
+	<div class="col">
+		<div class="product" style="background-image: url('{{MEDIA_URL}}{{product.image}}')"></div>
+		<p>Type: {{ product.name }}</p>
+		<p>Manufacturer: {{ product.manufacturer }}</p>
+		<p>Description: {{ product.description }}</p>
+		<p>Price: {{ product.price }}</p>
+
+		<form method="POST" action="{% url 'add_to_cart' product.id %}">
+			{% csrf_token %}
+			<div class="input-group">
+				<input name="quantity" type="number" min="1" class="form-control" placeholder="Quantity">
+				<span class="input-group-btn">
+                    <button class="btn btn-success" type="submit">Add</button>
+                </span>
+			</div>
+		</form>
 	</div>
-    {% endfor %}
+	{% endfor %}
 </div>
 <p> still linked i hope</p>
 {% endblock %}

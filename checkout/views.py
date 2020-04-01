@@ -7,7 +7,7 @@ from .forms import PaymentForm, OrderForm
 # used to confirm payment
 import stripe
 # import machinery class to be used
-from products.models import Machinery
+from products.models import Product
 # to create a timestamp when order is placed
 from django.utils import timezone
 # to provide a visible message to the user
@@ -31,7 +31,7 @@ def checkout(request):
             cart = request.session.get('cart', {})
             total = 0
             for id, quantity in cart.items():
-                product = get_object_or_404(Machinery, pk=id)
+                product = get_object_or_404(Product, pk=id)
                 total += quantity * product.price
                 order_item = OrderItem(
                     order=order,

@@ -22,7 +22,7 @@ from accounts.views import index, logout, login, registration, user_profile
 # imported urls from products app
 from products import urls as urls_products
 # import the view function
-from products.views import all_machinery, search
+from products.views import all_products, search
 # import the media root from settings
 from .settings import MEDIA_ROOT
 # import cart functions
@@ -34,7 +34,7 @@ from accounts import urls as urls_accounts
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_machinery, name='index'),
+    url(r'^$', all_products, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     #url(r'^accounts/logout/$', logout, name='logout'),
     #url(r'^accounts/login/$', login, name='login'),
