@@ -1,18 +1,18 @@
 from django.shortcuts import render
 # import the machinery object from models so we can render to our view
-from .models import Machinery
+from .models import Product
 
 
 # view to render to machinery.html
-def all_machinery(request):
-    machinery = Machinery.objects.all()
-    return render(request, 'machinery.html', {'machinery': machinery})
+def all_products(request):
+    products = Product.objects.all()
+    return render(request, 'products.html', {'products': products})
 
 
 # a search function to search for items
 def search(request):
-    products = Machinery.objects.filter(name_icontains=request.GET['q'])
-    return render(request, 'machinery.html', {'products':products})
+    products = Product.objects.filter(name_icontains=request.GET['q'])
+    return render(request, 'products.html', {'products': products})
 
 
 

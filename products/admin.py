@@ -1,5 +1,5 @@
 from django.contrib import admin
 # import the model object from models
-from .models import Machinery
+from .models import Product
 
-admin.site.register(Machinery)
+admin.site.register(Product)

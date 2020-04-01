@@ -1,5 +1,5 @@
 from django.db import models
-from products.models import Machinery
+from products.models import Product
 
 
 # object for storing customer order details
@@ -20,7 +20,7 @@ class Order(models.Model):
 # object for item ordered
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, null=False)
-    product = models.ForeignKey(Machinery, null=False)  # Watch here product
+    product = models.ForeignKey(Product, null=False)  # Watch here product
     quantity = models.IntegerField(blank=False)
 
     def __str__(self):
