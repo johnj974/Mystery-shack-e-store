@@ -7,9 +7,9 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <form method="post">
+    <form method="POST">
 		{% csrf_token %}
 		{{ login_form | as_bootstrap }}
-		<input type="submit" value="Login">
+		<button type="submit">Login</button>
     </form>
 {% endblock %}

@@ -1,9 +1,9 @@
 # reverse, redirect added to existing library
 from django.shortcuts import render, reverse, redirect
-# additional django library
+# additional django library with ability to show messages
 from django.contrib import auth, messages
 # forms imported from forms.py file
-from accounts.forms import loginForm, UserRegistrationForm
+from accounts.forms import LoginForm, UserRegistrationForm
 # additional library to stop unauthorised use of functions
 from django.contrib.auth.decorators import login_required
 # importing user model
@@ -29,7 +29,7 @@ def login(request):
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == 'POST':
-        login_form = loginForm(request.POST)
+        login_form = LoginForm(request.POST)
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password'])
@@ -40,7 +40,7 @@ def login(request):
             else:
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
-        login_form = loginForm()    # creates an instance of the form
+        login_form = LoginForm()    # creates an instance of the form
     return render(request, 'login.html', {'login_form': login_form})    # form passed in for rendering to page
 
 

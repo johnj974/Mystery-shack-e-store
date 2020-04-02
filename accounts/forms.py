@@ -8,15 +8,15 @@ from django.core.exceptions import ValidationError
 
 
 # basic login form
-class loginForm(forms.Form):
+class LoginForm(forms.Form):
     username = forms.CharField(label='username', max_length=100)
     password = forms.CharField(label='password', widget=forms.PasswordInput)
 
 
 # registration form to create new user
 class UserRegistrationForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    #first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    #last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
     password1 = forms.CharField(label='password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput)
@@ -25,7 +25,7 @@ class UserRegistrationForm(UserCreationForm):
 # inner class to provide information about the form
 class Meta:
     model = User
-    fields = ['email', 'username', 'password1', 'password2', 'first_name', 'last_name']
+    fields = ['email', 'username', 'password1', 'password2']
 
 
 # e-mail validation
