@@ -7,6 +7,7 @@
 <div class="row">
 	{% for product in products %}
 	<div class="col">
+        <div class="panel-body">
 		<div class="product" style="background-image: url('{{MEDIA_URL}}{{product.image}}')"></div>
 		<p>Type: {{ product.name }}</p>
 		<p>Manufacturer: {{ product.manufacturer }}</p>
@@ -22,6 +23,7 @@
                 </span>
 			</div>
 		</form>
+        </div>
 	</div>
 	{% endfor %}
 </div>
