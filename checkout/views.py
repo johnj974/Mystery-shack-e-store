@@ -18,7 +18,7 @@ from .models import OrderItem
 stripe.api_key = settings.STRIPE_SECRET
 
 
-#@login_required
+@login_required
 def checkout(request):
     if request.method == "POST":
         order_form = OrderForm(request.POST)
@@ -48,7 +48,7 @@ def checkout(request):
                     card=payment_form.cleaned_data['stripe_id'],
                 )
             except stripe.error.CardError:
-                messages.error(request, "You card was declined")
+                messages.error(request, "Your card was declined")
             if customer.paid:
                 messages.error(request, "Payment has been accepted")
                 request.session["cart"] = {}
