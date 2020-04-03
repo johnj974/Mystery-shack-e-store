@@ -1,1 +1,1 @@
-web:gunicorn(agri-e-store).wsgi:application
+web: gunicorn aagristore.wsgi:application
