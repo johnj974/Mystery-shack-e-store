@@ -10,7 +10,7 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=20, blank=False)
     county = models.CharField(max_length=20, blank=False)
     eir_code = models.CharField(max_length=10, blank=False)
-    contact_number = models.IntegerField(blank=False)
+    contact_number = models.CharField(max_length=20, blank=False)
     date = models.DateField()
 
     def __str__(self):

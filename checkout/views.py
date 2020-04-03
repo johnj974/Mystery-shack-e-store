@@ -27,7 +27,7 @@ def checkout(request):
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
-            order.save
+            order.save()
             cart = request.session.get('cart', {})
             total = 0
             for id, quantity in cart.items():
@@ -37,7 +37,7 @@ def checkout(request):
                     order=order,
                     product=product,
                     quantity=quantity
-                )
+                    )
                 order_item.save()
 
             try:
