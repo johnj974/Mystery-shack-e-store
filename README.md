@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.com/johnj974/agristore.svg?branch=master)](https://travis-ci.com/johnj974/agristore)
+[![Build Status](https://travis-ci.com/johnj974/store.svg?branch=master)](https://travis-ci.com/johnj974/store)
