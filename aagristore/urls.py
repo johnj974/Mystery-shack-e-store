@@ -35,7 +35,7 @@ from search import urls as urls_search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_products, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     #url(r'^accounts/logout/$', logout, name='logout'),
     #url(r'^accounts/login/$', login, name='login'),
