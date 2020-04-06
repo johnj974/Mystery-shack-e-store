@@ -1,7 +1,41 @@
-body{
-    background-color: yellow;
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.carousel{
-    height: 300px;
+
+.hero-image {
+  
+    background-image: url("../images/tractor.jpg");
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+form{
+    width: 50%;
+    margin-top: 20vh;
+}
+
+/*-------------------------------------------------login page---------------------------------------------------*/
+
+#side{
+    background-color:#343a40;
+    height: 100vh;
 }
