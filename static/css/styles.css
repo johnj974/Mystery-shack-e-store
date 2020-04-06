@@ -1,4 +1,7 @@
 body{
-    margin-left: 20px;
-    background-color: red;
+    background-color: yellow;
+}
+
+.carousel{
+    height: 300px;
 }
