@@ -4,24 +4,8 @@ body, html {
     margin: 0;
 }
 
-
-.hero-image {
-  
-    background-image: url("../images/tractor.jpg");
-    height: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-text {
-    text-align: center;
-    position: fixed;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+.col{
+    padding: 0;
 }
 
 .container-fluid{
@@ -33,6 +17,16 @@ form{
     margin-top: 15vh;
 }
 
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 70vh;
+}
+
+.carousel-caption {
+    top: 5%;
+}
 /*-------------------------------------------------login page---------------------------------------------------*/
 
 #side{
@@ -72,7 +66,7 @@ form{
     padding-left: 0px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
    form{
     width:100%;
   }
