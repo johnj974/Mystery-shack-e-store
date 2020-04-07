@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-{% block title %}Products{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
 <div class="hero-image">
@@ -9,7 +9,7 @@
     <h1>2020 Tractors</h1>
   </div>
 </div>
-<div class="row">
+<!---<div class="row">
 	{% for product in products %}
 	<div class="col">
 		<div class="panel-body">
@@ -31,6 +31,7 @@
 		</div>
 	</div>
 	{% endfor %}
-</div>
+</div>-->
 <p>home page</p>
+<p><a href="{% url 'products' %}">Products</a></p>
 {% endblock %}

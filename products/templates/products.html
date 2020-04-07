@@ -4,13 +4,33 @@
 {% block title %}Products{% endblock %}
 
 {% block content %}
-<div class="hero-image">
-  <div class="hero-text">
-    <h1>2020 Tractors</h1>
-  </div>
-</div>
-<div class="row">
-	{% for product in products %}
+<div id="product-card" class="card mb-3">
+	<div class="row no-gutters">
+		<div class="col-md-4">
+			<img src="..." class="card-img" alt="...">
+    </div>
+			{% for product in products %}
+			<div class="col-md-8">
+				<div class="card-body">
+					<h5 class="card-title">{{ product.name }}</h5>
+					<p class="card-text">Description: {{ product.description }}</p>
+					<p class="card-text">Price: {{ product.price }}</p>
+					<form method="post" action="{% url 'add_to_cart' product.id %}">
+						{% csrf_token %}
+						<div class="input-group">
+							<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+							<span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                    </span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endblock %}
+
 	<div class="col">
 		<div class="panel-body">
 			<div class="product" style="background-image: url('{{MEDIA_URL}}{{product.image}}')"></div>
@@ -19,18 +39,14 @@
 			<p>Description: {{ product.description }}</p>
 			<p>Price: {{ product.price }}</p>
 
-			<form method="POST" action="{% url 'add_to_cart' product.id %}">
+			<form method="post" action="{% url 'add_to_cart' product.id %}">
 				{% csrf_token %}
 				<div class="input-group">
-					<input name="quantity" type="number" min="1" class="form-control" placeholder="Quantity">
+					<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
 					<span class="input-group-btn">
-                    <button class="btn btn-success" type="submit">Add</button>
-                </span>
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
 				</div>
 			</form>
 		</div>
 	</div>
-	{% endfor %}
-</div>
-<p> products page</p>
-{% endblock %}
