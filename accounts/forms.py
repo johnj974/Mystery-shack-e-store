@@ -15,12 +15,11 @@ class LoginForm(forms.Form):
 
 # registration form to create new user
 class UserRegistrationForm(UserCreationForm):
-    #first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    #last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+    username = forms.CharField(label='username')
+    email = forms.EmailField(max_length=254)
     password1 = forms.CharField(label='password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput)
-
+    
 
 # inner class to provide information about the form
 class Meta:
@@ -49,11 +48,3 @@ def clean_password2(self):
     return password2
 
 
-"""class UserRegistrationForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
-
-    class Meta:
-        model = User
-        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2', ]"""

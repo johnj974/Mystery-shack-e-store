@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<div class="row row-flex">
+	{% for product in products %}
+	<div class="card" style="width: 18rem;">
+		<div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+		<div class="card-body">
+			<h5 class="card-title">{{ product.name }}</h5>
+			<p class="card-text">{{ product.description }}</p>
+			<p class="card-text">{{ product.price }}</p>
+			<form method="post" action="{% url 'add_to_cart' product.id %}">
+				{% csrf_token %}
+				<div class="input-group">
+					<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+					<span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
+				</div>
+			</form>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

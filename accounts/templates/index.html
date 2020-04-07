@@ -9,29 +9,6 @@
     <h1>2020 Tractors</h1>
   </div>
 </div>
-<!---<div class="row">
-	{% for product in products %}
-	<div class="col">
-		<div class="panel-body">
-			<div class="product" style="background-image: url('{{MEDIA_URL}}{{product.image}}')"></div>
-			<p>Type: {{ product.name }}</p>
-			<p>Manufacturer: {{ product.manufacturer }}</p>
-			<p>Description: {{ product.description }}</p>
-			<p>Price: {{ product.price }}</p>
-
-			<form method="POST" action="{% url 'add_to_cart' product.id %}">
-				{% csrf_token %}
-				<div class="input-group">
-					<input name="quantity" type="number" min="1" class="form-control" placeholder="Quantity">
-					<span class="input-group-btn">
-                    <button class="btn btn-success" type="submit">Add</button>
-                </span>
-				</div>
-			</form>
-		</div>
-	</div>
-	{% endfor %}
-</div>-->
 <p>home page</p>
 <p><a href="{% url 'products' %}">Products</a></p>
 {% endblock %}

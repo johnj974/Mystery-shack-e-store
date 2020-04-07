@@ -74,17 +74,3 @@ def user_profile(request):
     user = User.objects.get(username=request.user.username)
     return render(request, 'profile.html', {'profile': user})
 
-
-"""def registration(request):
-    if request.method == 'POST':
-        registration_form = UserRegistrationForm(request.POST)
-        if registration_form.is_valid():
-            registration_form.save()
-            username = registration_form.cleaned_data.get('username')
-            raw_password = registration_form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('register')
-    else:
-        registration_form = UserRegistrationForm()
-    return render(request, 'index.html', {'form': registration_form})"""
