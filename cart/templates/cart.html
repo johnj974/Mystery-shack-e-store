@@ -4,6 +4,17 @@
 {% block title %}Cart{% endblock %}
 
 {% block content %}
+{% if  total  == 0 %}
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-4" id="side">
+    </div>
+		<div class="col-8" id="form-side">
+            <h3 class="notification">Your Shopping Cart Is Currently Empty</h3>
+		</div>
+	</div>
+</div>    
+{% endif %}
 
 {% for item in cart_items %}
 <div class="card mb-3" style="max-width: 90%;">
