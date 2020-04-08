@@ -63,18 +63,18 @@ form{
 }
 
 
-.btn{
+.btn:hover{
     color: #343a40;
     padding-left: 0px;
-   
+    transition: color 0.5s ease-in-out;
+    background-color: white;
 }
 
-.btn:hover{
+.btn{
     color: antiquewhite;
-    transition: color 0.5s ease-in-out;
     background-color: #343a40;
     text-decoration: none;
-    padding-left: 0px;
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -163,3 +163,12 @@ caption p {
 
 /*-----------------------products------------------------*/
 
+.mb-3{
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+/*-------------------cart----------------------*/
+#cart-total{
+    margin: 0;
+}
