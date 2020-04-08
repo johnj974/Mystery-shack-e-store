@@ -6,7 +6,17 @@
 {% block content %}
 <div class="hero-image">
   <div class="hero-text">
+    {% if user.is_authenticated %}
+    <h3>{{ user }}'s</h3>
+    {% endif %}
     <h1>Mystery Shack</h1>
+    {% if messages %}
+		<h3>
+			{% for info in messages %}
+			    {{ info }}
+			{% endfor %}
+		</h3>
+	{% endif %}
   </div>
 </div>
 {% endblock %}
