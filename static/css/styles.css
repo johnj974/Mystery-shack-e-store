@@ -12,6 +12,12 @@ body, html {
     padding: 0;
 }
 
+
+#payment-form{
+    width: 80%;
+    margin: 0 auto;
+}
+
 form{
     width: 50%;
     margin-top: 15vh;
@@ -50,6 +56,10 @@ form{
 
 #product-card{
     margin: 5%;
+}
+
+#submit_payment_btn{
+    margin-bottom: 3%;
 }
 
 
@@ -99,15 +109,6 @@ body, html {
 }
 
 /*------------------------------------------------------------------------------------------*/
-
-
-/*.icon-bar {
-    background-color: #fff;
-}
-
-.accountform {
-    padding-top: 20px;
-}*/
 
 .badge {
     padding-left: 9px;
