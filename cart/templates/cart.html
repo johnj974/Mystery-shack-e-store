@@ -44,8 +44,10 @@
 		</div>
 	</div>
 {% endfor %}
+{% if user.is_authenticated %}
 <div id="cart-total" class="row">
     <h5>Total: &#8364;{{ total }}</h5>
     <a href="{% url 'checkout' %}" class="btn" role="button">Checkout</a>
 </div>
+{% endif %}
 {% endblock %}
