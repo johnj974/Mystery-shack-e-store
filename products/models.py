@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# tractor object
 class Product(models.Model):
     name = models.CharField(max_length=50)
     horsepower = models.CharField(max_length=50)

@@ -24,8 +24,10 @@ form{
 }
 
 #search-bar{
-    padding-right: 0;
+    padding-right: 0px;
+    display: contents;
 }
+
 
 .notification{
     margin: 5%;
