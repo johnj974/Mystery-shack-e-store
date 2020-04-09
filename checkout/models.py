@@ -1,5 +1,6 @@
 from django.db import models
 from products.models import Product
+from rare_items.models import RareItem
 
 
 # object for storing customer order details

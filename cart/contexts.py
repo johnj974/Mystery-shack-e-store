@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from rare_items.models import RareItem
 
 
 def cart_contents(request):
@@ -13,3 +14,6 @@ def cart_contents(request):
         product_count += quantity
         cart_items.append({'id': id, 'quantity': quantity, 'product': product})
     return {'cart_items': cart_items, 'total': total, 'product_count': product_count}
+
+
+

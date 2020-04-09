@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-{% block title %}Products{% endblock %}
+{% block title %}Rare Items{% endblock %}
 
 {% block content %}
-{% for product in products %}
+{% for product in rare %}
 <div class="card mb-3" style="max-width: 90%;">
 	<div class="row no-gutters">
 		<div class="col-md-4">
@@ -17,19 +17,17 @@
 					<p class="card-text"><small class="text-muted">{{ product.price }}</small></p>
 				</div>
 			</div>
-            {% if user.is_authenticated %}
 			<div class="col-md-4">
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
 					<div class="input-group">
-						<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+						<input name="quantity" type="number" min="1" max="1" class="form-control" placeholder="Quantity">
 						<span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Add</button>
                         </span>
 					</div>
 				</form>
 			</div>
-            {% endif %}
 		</div>
 	</div>
 	{% endfor %}

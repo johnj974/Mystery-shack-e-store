@@ -28,6 +28,7 @@ from cart import urls as urls_cart
 from checkout import urls as urls_checkout
 from accounts import urls as urls_accounts
 from search import urls as urls_search
+from rare_items import urls as urls_rare
 
 
 urlpatterns = [
@@ -39,4 +40,5 @@ urlpatterns = [
     url(r'cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
+    url(r'^rare/', include(urls_rare)),
 ]
