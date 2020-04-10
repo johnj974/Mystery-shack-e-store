@@ -4,11 +4,13 @@
 {% block title %}Products{% endblock %}
 
 {% block content %}
+<a class="btn" href="{% url 'create_product' %}">Create Product</a>
 {% if user.is_authenticated %}
-    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+<p>Welcome, {{ user.username }}. Thanks for logging in.</p>
 {% else %}
-    <p>Welcome, new user. Please log in.</p>
+<p>Welcome, new user. Please log in.</p>
 {% endif %}
+
 {% for product in products %}
 <div class="card mb-3" style="max-width: 90%;">
 	<div class="row no-gutters">
@@ -22,7 +24,7 @@
 					<p class="card-text"><small class="text-muted">{{ product.price }}</small></p>
 				</div>
 			</div>
-            {% if user.is_authenticated %}
+			{% if user.is_authenticated %}
 			<div class="col-md-4">
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
@@ -34,7 +36,7 @@
 					</div>
 				</form>
 			</div>
-            {% endif %}
+			{% endif %}
 		</div>
 	</div>
 	{% endfor %}
