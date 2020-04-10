@@ -2,7 +2,7 @@
 
 {% load bootstrap_tags %}
 
-{% block title %}Product Update{% endblock %}
+{% block title %}Create Product{% endblock %}
 
 {% block content %}
 <div class="container-fluid">
@@ -10,8 +10,10 @@
     <div class="col-4" id="side">
     </div>
 		<div class="col-8" id="form-side">
-            <h2>Product Update</h2>
+            <h2>Create Product</h2>
             <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
                 <input type="submit" name="submit">
             </form>
 
