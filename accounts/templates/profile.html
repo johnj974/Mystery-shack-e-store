@@ -3,7 +3,14 @@
 {% block title %}{{ user }}'s Profile{% endblock %}
 
 {% block content %}
-
-    <p>{{ user }}</p>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-4" id="side">
+    </div>
+		<div class="col-8" id="form-side">
+            {{ user }}
+		</div>
+	</div>
+</div>
     
 {% endblock %}

@@ -4,26 +4,23 @@
 {% block title %}Products{% endblock %}
 
 {% block content %}
-<a class="btn" href="{% url 'create_product' %}">Create Product</a>
-{% if user.is_authenticated %}
-<p>Welcome, {{ user.username }}. Thanks for logging in.</p>
-{% else %}
-<p>Welcome, new user. Please log in.</p>
-{% endif %}
+
 
 {% for product in products %}
 <div class="card mb-3" style="max-width: 90%;">
 	<div class="row no-gutters">
 		<div class="col-md-4">
-			<img src="{{ MEDIA_URL }}{{ product.image }}" class="card-img" alt="{{ product.name }}">
+			<img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" class="card-img" alt="{{ product.name }}">
     </div>
 			<div class="col-md-4">
 				<div class="card-body">
 					<h5 class="card-title">{{ product.name }}</h5>
 					<p class="card-text">{{ product.description }}</p>
 					<p class="card-text"><small class="text-muted">{{ product.price }}</small></p>
+                    {% if request.user.is_superuser %}
                     <a class="btn" href="{% url 'update_product' product.id %}">Update Product</a>
                     <a class="btn" href="{% url 'delete_product' product.id %}">Delete Product</a>
+                    {% endif %}
 				</div>
 			</div>
 			{% if user.is_authenticated %}

@@ -37,9 +37,11 @@
 							<li class="nav-item">
 								<a class="nav-link" href="{% url 'logout' %}">Logout</a>
 							</li>
+                            {% if request.user.is_superuser %}
                             <li class="nav-item">
-								<a class="nav-link" href="{% url 'rare' %}">Historical</a>
+								<a class="nav-link" href="{% url 'create_product' %}">Create Product</a>
 							</li>
+                            {% endif %}
 							{% else %}
 							<li class="nav-item">
 								<a class="nav-link" href="{% url 'login' %}">Login</a>

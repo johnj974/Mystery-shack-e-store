@@ -4,19 +4,15 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
 <div class="hero-image">
   <div class="hero-text">
     {% if user.is_authenticated %}
-    <h4>{{ user }}'s</h4>
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+    {% else %}
+    <p>Welcome,Please register or log in to purchase products</p>
     {% endif %}
     <h1>Mystery Shack</h1>
-    {% if messages %}
-		<h4>
-			{% for info in messages %}
-			    {{ info }}
-			{% endfor %}
-		</h4>
-	{% endif %}
   </div>
 </div>
 {% endblock %}

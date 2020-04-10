@@ -177,6 +177,12 @@ caption p {
     margin-top: 2%;
 }
 
+@media only screen and (min-width: 768px) {
+   form{
+    height: 30vh;
+  }
+}
+
 /*-------------------cart----------------------*/
 #cart-total{
     margin: 0;
@@ -187,4 +193,12 @@ caption p {
 h5{
     margin-bottom: 0px;
     padding-top: 6px;
+}
+
+#product-image{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
