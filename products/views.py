@@ -22,7 +22,7 @@ def createProduct(request):
     return render(request, "product_form.html", context)
 
 
-def updateProduct(request, pk):
+def updateProduct(request, id):
     form = ProductForm()
     context = {'form': form}
-    return redirect(reverse("products"), context)
+    return render(request, "product_form.html", context)

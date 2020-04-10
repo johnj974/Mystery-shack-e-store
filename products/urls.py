@@ -6,5 +6,6 @@ from .views import all_products, createProduct, updateProduct
 urlpatterns = [
     url('^$', all_products, name='products'),
     url("^create_product/$", createProduct, name='create_product'),
-     url("^update_product/<str:pk>/$", updateProduct, name='update_product'),
+    url(r"^update_product/(?P<id>\d+)", updateProduct, name='update_product'),
 ]
+
