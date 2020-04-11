@@ -13,18 +13,16 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='password', widget=forms.PasswordInput)
 
 
-# registration form to create new user
 class UserRegistrationForm(UserCreationForm):
-    username = forms.CharField(label='username')
-    email = forms.EmailField(max_length=254)
-    password1 = forms.CharField(label='password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput)
-    
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
+    password2 = forms.CharField(
+        label='Password Confirmation',
+        widget=forms.PasswordInput
+    )
 
-# inner class to provide information about the form
-class Meta:
-    model = User
-    fields = ['email', 'username', 'password1', 'password2']
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
 
 
 # e-mail validation
@@ -48,3 +46,16 @@ def clean_password2(self):
     return password2
 
 
+
+# registration form to create new user
+#lass UserRegistrationForm(UserCreationForm):
+#    username = forms.CharField(label='username')
+#    email = forms.EmailField(max_length=254)
+#    password1 = forms.CharField(label='password', widget=forms.PasswordInput)
+#    password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput)
+    
+
+# inner class to provide information about the form
+#class Meta:
+#    model = User
+#    fields = ['email', 'username', 'password1', 'password2']
