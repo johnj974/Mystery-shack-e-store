@@ -9,7 +9,7 @@
   <div class="hero-text">
     <h1>Mystery Shack</h1>
     {% if user.is_authenticated %}
-    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+    <p>Welcome {{ user.username }}. Thanks for logging in.</p>
     {% else %}
     <p>Please register or log in to purchase products</p>
     {% endif %}
