@@ -1,49 +1,10 @@
+
+/*--- main styles for pages---*/
 body, html {
     height: 100%;
     padding: 0;
     margin: 0;
 }
-
-.col{
-    padding: 0;
-}
-
-.container-fluid{
-    padding: 0;
-}
-
-
-#payment-form{
-    width: 80%;
-    margin: 0 auto;
-}
-
-form{
-    width: 50%;
-    margin-top: 15vh;
-}
-
-#search-bar{
-    padding-right: 0px;
-    display: contents;
-}
-
-
-.notification{
-    margin: 5%;
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 100vh;
-}
-
-.carousel-caption {
-    top: 5%;
-}
-/*-------------------------------------------------login page---------------------------------------------------*/
 
 #side{
     background-color:#343a40;
@@ -64,14 +25,43 @@ form{
     margin-top: 1%;
 }
 
-#product-card{
+.col{
+    padding: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+#payment-form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+form{
+    width: 50%;
+    margin-top: 15vh;
+}
+
+.notification{
     margin: 5%;
 }
 
-#submit_payment_btn{
-    margin-bottom: 3%;
+/*.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
 }
 
+.carousel-caption {
+    top: 5%;*/
+}
+/*-------------------------------------------------login page---------------------------------------------------*/
+
+.password-reset{
+    text-align: center;
+}
 
 .btn:hover{
     color: #343a40;
@@ -80,7 +70,7 @@ form{
 }
 
 .btn{
-    color: antiquewhite;
+    color: white;
     background-color: #343a40;
     text-decoration: none;
     
@@ -92,11 +82,6 @@ form{
   }
 }
 /*------------------------------home page-----------------------------------------------------------*/
-
-body, html {
-    height: 100%;
-}
-
 
 .hero-image {
   background-image: url("../images/monkey.jpg");
@@ -117,25 +102,10 @@ body, html {
   color: white;
 }
 
-/*------------------------------------------------------------------------------------------*/
-
-.badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
+#search-bar{
+    padding-right: 0px;
+    display: contents;
 }
-
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
-}
-
-caption p {
-    word-wrap: break-word;
-}
-
 
 /*---------------------------- footer------------------------------ */
 
@@ -145,10 +115,9 @@ caption p {
     bottom: 0;
     width: 100%;
     background-color: #343a40;
-    color: antiquewhite;
+    color: white;
     text-align: center;
 }
-
 
 
 .footer ul{
@@ -164,7 +133,7 @@ caption p {
 }
 
 .footer ul li i{
-    color:  antiquewhite;
+    color:  white;
     transition: color 0.5s ease-in-out;
 }
 
@@ -185,16 +154,12 @@ caption p {
   }
 }
 
-/*-------------------cart----------------------*/
-#cart-total{
-    margin: 0;
-    margin-top: -5px;
-    margin-bottom: 5%;
+#product-card{
+    margin: 5%;
 }
 
-h5{
-    margin-bottom: 0px;
-    padding-top: 6px;
+#submit_payment_btn{
+    margin-bottom: 3%;
 }
 
 #product-image{
@@ -208,3 +173,34 @@ h5{
 .product-container{
     margin-bottom: 50px;
 }
+
+
+/*-------------------cart----------------------*/
+#cart-total{
+    margin: 0;
+    margin-top: -5px;
+    margin-bottom: 5%;
+}
+
+h5{
+    margin-bottom: 0px;
+    padding-top: 6px;
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+caption p {
+    word-wrap: break-word;
+}
+

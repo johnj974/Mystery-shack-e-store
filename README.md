@@ -7,7 +7,7 @@
 
 
 <p>
-This project has been deployed to heroku and can be viewed <a href="/" target="_blank">here.</a>
+This project has been deployed to heroku and can be viewed <a href="https://agri-e-store.herokuapp.com/" target="_blank">here.</a>
 The projects repository can be viewed <a href="https://github.com/johnj974/store" target="_blank">here.</a><br>
 <img src="static/css/images/screenshot.png" alt="responsive images of site">
 </p>
@@ -28,7 +28,14 @@ they have the option of registering from the navigation bar</p>
  located in the navbar to help customers look for items, when a customer adds items to the basket
   there is a counter on the cart which gives them a visual clue as to the amount of products that they have added, the customer
   clicks on the cart to access the cart page where they can amend each item in their shopping cart before moving onto the checkout page, 
-  there is a list at the top of the page again confirming the products for purchase before the customer enters delivery and payment details </p>
+  there is a list at the top of the page again confirming the products for purchase before the customer enters delivery and payment details,
+  Customers can also request a new password through the login page, an e mail is sent to their address which they use to reset their password,
+   According to all the youtube tutorials and the methods shown in the code institute module this should have been easy to implement but for
+    some reason it took me a lot of time to get right. If the SMPTA authentication failure appears you may have to go to <a href="https://accounts.google.com/DisplayUnlockCaptcha" target="_blank">Captcha</a> 
+    and click on continue to enable the authentication</p>
+    <p>As an admin user you have the option of adding, deleting and updating products. Unfortunately this is not fully functional as I
+     have yet to figure out how to add an image to the new created product from the dashboard</p>
+  
 
 
 
@@ -41,7 +48,12 @@ they have the option of registering from the navigation bar</p>
  like to fix this when I have more time. I removed the connection to the app until I can figure out how to implement it correctly </p>
  <p>More detailed information about the products such as the number in stock and a way of recording items sold in total and maybe over a certain
  period of time. I would also include an individual counter on each product to show the amount of each item a person has in their cart.</p>
- <p>I did not get a chance to finish the profile page of the logged in user, I would like it to show customers address and purchasing history</p>
+ <p>I did not get a chance to finish the profile page of the logged in user, I would like it to show customers address and purchasing history.
+ Also some kind of a loyalty system that would reduce the cost of products based on the amount already purchased by a customer 
+ As a superuser you are able to adjust products but not the product image, this is a future feature that I would want to add, I would also 
+ like the superuser to be able to do more from the dashboard such as updating users from the dashboard. I must also add a search message when 
+ a search item does not match the search parameters, also adding some sort of filtered search options when the list of products gets larger</p>
+ <p></p>
 
 <h2><a id="user-content-technologies-used" class="anchor" aria-hidden="true" href="#technologies-used"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Technologies Used</h2>
 <p></p>
@@ -147,6 +159,5 @@ ironed out as I went over the code</p>
 <p>The project was built using the code institute django module as the main go to referance when I got stuck,the majority of the 
 functionality comes from the django  module tutorial. I also used various youtube channels
 such as Traversy media, Dennis Ivy, Corey Schafer and Freecodecamp for ideas along with all the various stack overflow threads which helped to me to
-identify and fix a lot of the errors that I encountered</p>
+identify and fix a lot of the errors that I encountered.</p>
 
-https://accounts.google.com/DisplayUnlockCaptcha 
