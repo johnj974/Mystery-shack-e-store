@@ -148,3 +148,5 @@ ironed out as I went over the code</p>
 functionality comes from the django  module tutorial. I also used various youtube channels
 such as Traversy media, Dennis Ivy, Corey Schafer and Freecodecamp for ideas along with all the various stack overflow threads which helped to me to
 identify and fix a lot of the errors that I encountered</p>
+
+https://accounts.google.com/DisplayUnlockCaptcha 
