@@ -5,6 +5,10 @@
     <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1><a id="user-content-your-projects-name" class="anchor" aria-hidden="true" href="#your-projects-name"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
     </a>Mystery Shack</h1>
 
+<p>The Mystery Shack is an e-commerce site which allows customers to purchase online goods, customers can browse the products on the site, the
+ site has all the functions of an e-commerce site with the customer once they are registered be able to add products to their cart and proceed to
+ a checkout area where they can amend their order or they can proceed to a payment area where they can enter delivery and payment options using
+  the stripe api</p>
 
 <p>
 This project has been deployed to heroku and can be viewed <a href="https://agri-e-store.herokuapp.com/" target="_blank">here.</a>
@@ -15,9 +19,22 @@ The projects repository can be viewed <a href="https://github.com/johnj974/store
 
 <h2><a id="user-content-ux" class="anchor" aria-hidden="true" href="#ux"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
 </a>UX</h2>
-<p>This is an ecommerce website, it is designed for an owner to provide customers with products which they can buy once they have registered
-any user can view the site but you must be logged in to access the products for sale, the products page leads to the cart where the customers 
-can amend their orders. They can then process their payments through the checkout page and validate payment using Stripe </p>
+<p>The idea for the user experience is to have a site that is easy to navigate around, I did not achieve that goal with this design, the lack of a 
+wireframe and an idea of what the site was going to cater for at the start of the project hindered things later.</p>
+<p>My goals as a user were to have a site that is easy on the eye and easy to navigate around where all the  important information is prominent
+on the site and that there would be options to get more information if desired, I wanted users to be able to view the products and to be able 
+to purchase them with little fuss. As a user of the site my plan was to have an option for the customer to updaate all their details but at the 
+moment they can only change their password.
+<p>As an e-commerce customer I believe that the site delivers on the core requirements of such a site where the user can:</p>
+<ul>
+<li>Register an account</li>
+<li>Log in or log out of their registered account</li>
+<li>Search for products</li>
+<li>Reset their password</li>
+<li>Add products to a cart</li>
+<li>Adjust their orders</li>
+<li>Pay for their items securely</li>
+</ul>
 <h2><a id="user-content-features" class="anchor" aria-hidden="true" href="#features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
 </a>Features</h2>
 
@@ -25,16 +42,16 @@ can amend their orders. They can then process their payments through the checkou
 the navigation bar has all the links required to navigate around the site, any user that does not log in can only view the products,
 they have the option of registering from the navigation bar</p>
 <p>Once a customer logs in they have the option of puchasing any of the products from the products page, there is a search function
- located in the navbar to help customers look for items, when a customer adds items to the basket
-  there is a counter on the cart which gives them a visual clue as to the amount of products that they have added, the customer
-  clicks on the cart to access the cart page where they can amend each item in their shopping cart before moving onto the checkout page, 
-  there is a list at the top of the page again confirming the products for purchase before the customer enters delivery and payment details,
-  Customers can also request a new password through the login page, an e mail is sent to their address which they use to reset their password,
-   According to all the youtube tutorials and the methods shown in the code institute module this should have been easy to implement but for
-    some reason it took me a lot of time to get right. If the SMPTA authentication failure appears you may have to go to <a href="https://accounts.google.com/DisplayUnlockCaptcha" target="_blank">Captcha</a> 
-    and click on continue to enable the authentication</p>
-    <p>As an admin user you have the option of adding, deleting and updating products. Unfortunately this is not fully functional as I
-     have yet to figure out how to add an image to the new created product from the dashboard</p>
+located in the navbar to help customers look for items, when a customer adds items to the basket
+there is a counter on the cart which gives them a visual clue as to the amount of products that they have added, the customer
+clicks on the cart to access the cart page where they can amend each item in their shopping cart before moving onto the checkout page, 
+there is a list at the top of the page again confirming the products for purchase before the customer enters delivery and payment details,
+Customers can also request a new password through the login page, an e mail is sent to their address which they use to reset their password,
+According to all the youtube tutorials and the methods shown in the code institute module this should have been easy to implement but for
+some reason it took me a lot of time to get right. If the SMPTA authentication failure appears you may have to go to <a href="https://accounts.google.com/DisplayUnlockCaptcha" target="_blank">Captcha</a> 
+and click on continue to enable the authentication</p>
+<p>As an admin user you have the option of adding, deleting and updating products. Unfortunately this is not fully functional as I
+ have yet to figure out how to add an image to the new created product from the dashboard</p>
   
 
 
@@ -44,16 +61,18 @@ they have the option of registering from the navigation bar</p>
 </a>Features Left to Implement</h2>
 <p>This site is far from finished, there are a lot of features on the site that could be done a lot better given more time and more experience.</p>
 <p>I started a rare items page that would only appear if you were a registered or logged in customer, my idea was that it would be a reward
- for registering to the website, however when I tried to put the rare item into the cart it kept getting over ridden by the producks id key, I would 
- like to fix this when I have more time. I removed the connection to the app until I can figure out how to implement it correctly </p>
- <p>More detailed information about the products such as the number in stock and a way of recording items sold in total and maybe over a certain
- period of time. I would also include an individual counter on each product to show the amount of each item a person has in their cart.</p>
- <p>I did not get a chance to finish the profile page of the logged in user, I would like it to show customers address and purchasing history.
- Also some kind of a loyalty system that would reduce the cost of products based on the amount already purchased by a customer 
- As a superuser you are able to adjust products but not the product image, this is a future feature that I would want to add, I would also 
- like the superuser to be able to do more from the dashboard such as updating users from the dashboard. I must also add a search message when 
- a search item does not match the search parameters, also adding some sort of filtered search options when the list of products gets larger</p>
- <p></p>
+for registering to the website, however when I tried to put the rare item into the cart it kept getting over ridden by the producks id key, I would 
+like to fix this when I have more time. I removed the connection to the app until I can figure out how to implement it correctly </p>
+<p>More detailed information about the products such as the number in stock and a way of recording items sold in total and maybe over a certain
+period of time. I would also include an individual counter on each product to show the amount of each item a person has in their cart.</p>
+<p>I did not get a chance to finish the profile page of the logged in user, I would like it to show customers address and purchasing history.
+Also some kind of a loyalty system that would reduce the cost of products based on the amount already purchased by a customer 
+As a superuser you are able to adjust products from the dashboard but I could not get it to render an image to the new product
+from the dashboard, this is a future feature that I would want to add, I would also 
+like the superuser to be able to do more from the dashboard such as updating users from the dashboard. I must also add a search message when 
+a search item does not match the search parameters, also adding some sort of filtered search options when the list of products gets larger</p>
+<p> I would like to add the ability where the customer could adjust their own personal information, an option to leave a comment or rating on
+purchased products could also be added, also the ability for customers to create a wishlist where they could save items for a later purchase</p>
 
 <h2><a id="user-content-technologies-used" class="anchor" aria-hidden="true" href="#technologies-used"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Technologies Used</h2>
 <p></p>
@@ -82,17 +101,26 @@ they have the option of registering from the navigation bar</p>
  <li>All the forms were checked for required input fields</li>
  </ul>
 </p>
-<p>I used html validators and css validators to check for errors in the code, I corrected any errors</p>
+<p>I used html validators and css validators to check for errors in the code, I corrected as many errors as i could, A pep8
+validator was used to check the python code and most issues were resolved, I left the lines that were too long as I did
+not want to take the chance of breaking working code</p>
 <p>The forms for login and registering were tested to confirm it displays a message to the user asking to enter
- the required information and preventing the form submission in case a field was left empty.
+the required information and preventing the form submission in case a field was left empty.
 The social media links were tested individually to make sure it does redirect the user to the relevant content and that they
 opened in seperate tags</p>
 <p>Manual testing was done on all the functionality of the site.
- The products were successfully loaded and stored in the database, same with the profile of the user.
-  Products were added to the cart and moved to the checkout successfully and the Stripe payment function
-   has been verified with a test card and all transactions show up on the Stripe dashboard.</p>
+The products were successfully loaded and stored in the database, same with the profile of the user.
+Products were added to the cart and moved to the checkout successfully and the Stripe payment function
+has been verified with a test card and all transactions show up on the Stripe dashboard.</p>
+<p>The password reset functionality cracked me up for days, I tried three differant ways of implementing it and each one
+generated all the same problems, I traced the main problem back to my user registration form not recording the users email
+in the database for some reason, I reverted back to a django class for the creation of a new user and that seemed to fix
+that issue, I then had a problem with the SMTPA authentication even though I adjusted my google settings it would still given
+me that failure, Many many hours later and changes to my code resulted in coming across this <a href="https://accounts.google.com/DisplayUnlockCaptcha" target="_blank">Captcha</a>
+This when implemented allowed the site to send the e-mail and I was able to then confirm that the password reset function worked.
 <p>Automated testing was done by Travis-CL, there were a lot of errors during the build but they all seemed to get 
 ironed out as I went over the code</p>
+
  
  
 
@@ -160,4 +188,5 @@ ironed out as I went over the code</p>
 functionality comes from the django  module tutorial. I also used various youtube channels
 such as Traversy media, Dennis Ivy, Corey Schafer and Freecodecamp for ideas along with all the various stack overflow threads which helped to me to
 identify and fix a lot of the errors that I encountered.</p>
+
 
