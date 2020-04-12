@@ -19,11 +19,11 @@ The projects repository can be viewed <a href="https://github.com/johnj974/store
 <h2><a id="user-content-ux" class="anchor" aria-hidden="true" href="#ux"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
 </a>UX</h2>
 <p>The idea for the user experience is to have a site that is easy to navigate around, I did not achieve that goal with this design, the lack of a 
-wireframe and an idea of what the site was going to cater for at the start of the project hindered things later.</p>
-<p>My goals as a user were to have a site that is easy on the eye and easy to navigate around where all the  important information is prominent
+wireframe and an idea of what the site was going to cater for at the start of the project hindered things later.
+My goals as a user were to have a site that is easy on the eye and easy to navigate around where all the  important information is prominent
 on the site and that there would be options to get more information if desired, I wanted users to be able to view the products and to be able 
 to purchase them with little fuss. As a user of the site my plan was to have an option for the customer to updaate all their details but at the 
-moment they can only change their password.
+moment they can only change their password.</p>
 <p>As an e-commerce customer I believe that the site delivers on the core requirements of such a site where the user can:</p>
 <ul>
 <li>Register an account</li>
@@ -51,6 +51,7 @@ some reason it took me a lot of time to get right. If the SMPTA authentication f
 and click on continue to enable the authentication</p>
 <p>As an admin user you have the option of adding, deleting and updating products. Unfortunately this is not fully functional as I
  have yet to figure out how to add an image to the new created product from the dashboard</p>
+ <p>To access the site as a superuser use; username:admin, password:o1234567</p>
   
 
 
@@ -74,7 +75,6 @@ a search item does not match the search parameters, also adding some sort of fil
 purchased products could also be added, also the ability for customers to create a wishlist where they could save items for a later purchase</p>
 
 <h2><a id="user-content-technologies-used" class="anchor" aria-hidden="true" href="#technologies-used"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Technologies Used</h2>
-<p></p>
 <ul>
 <li>HTML</li>
 <li>CSS</li>
@@ -119,6 +119,8 @@ me that failure, Many many hours later and changes to my code resulted in coming
 This when implemented allowed the site to send the e-mail and I was able to then confirm that the password reset function worked.
 <p>Automated testing was done by Travis-CL, there were a lot of errors during the build but they all seemed to get 
 ironed out as I went over the code</p>
+<p>While tidying up code I seem to have effected the way the products are displayed when you are logged in they appear stretched, will fix
+if I have time</p>
 
  
  
@@ -161,11 +163,15 @@ ironed out as I went over the code</p>
     <li>Go to bottom of page and click on deploy branch</li>
     </ul>
     <h2>Local Deployment</h2>
-    <p>In order to clone the github repository, type the following command in a terminal: git clone https://github.com/johnj974/Store</p>
+    <p>In order to clone the github repository:</p>
     <ol>
-    <li>Clone the repository using the commands in the Github Cloning section above</li>
-    <li>This project in windows runs on a virtual environment, in order to create one, use the following command python3 -m venv .venv</li>
-    <li>Once the virtual environment has been created, active the virtual environment with source *path-to-virtual-environment*Scripts/activate</li>
+    <li>On GitHub, navigate to the main page of the repository.</li>
+    <li>Under the repository name, click Clone or download.</li>
+    <li>To clone the repository using HTTPS, under "Clone with HTTPS", click . To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click .</li>
+    <li>Open Git Bash.</li>
+    <li>Change the current working directory to the location where you want the cloned directory to be made.</li>
+    <li>Type git clone https://github.com/johnj974/Store</li>
+    <li>Press Enter. Your local clone will be created.</li>
     <li>Run pip install -r requirements.txt</li>
     <li>Start the server with ./manage.py runserver</li>
     </ol>

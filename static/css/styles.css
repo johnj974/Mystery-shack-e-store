@@ -47,6 +47,10 @@ form{
     margin: 5%;
 }
 
+#navrow{
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /*-------------------------------------------------login page---------------------------------------------------*/
 
@@ -97,6 +101,11 @@ p.password-reset{
     padding-right: 0px;
     display: contents;
 }
+
+#login-message > p{
+   margin-bottom: 0;
+}
+
 
 /*---------------------------- footer------------------------------ */
 
