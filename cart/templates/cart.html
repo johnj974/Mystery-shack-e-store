@@ -27,7 +27,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{ item.product.name }}</h5>
 					<p class="card-text">{{ item.product.description }}</p>
-					<p class="card-text"><small class="text-muted">{{ item.product.price }}</small></p>
+					<p class="card-text">&#8364;{{ item.product.price }}</p>
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -36,9 +36,10 @@
                     <div class="form-group">
                         <!--<label for="exampleInputAmount" class="sr-only">New Qty</label>-->
                         <div class="input-group">
-                            <div class="input-group-addon">Qty: {{item.quantity}}</div>
+        
                             <input name="quantity" type="number" min="0" max="999" class="form-control"> <button type="submit" class="btn">Amend</button>
                         </div>
+                        <div class="input-group-addon">Qty: {{item.quantity}}</div>
                     </div>
                 </form>
 			</div>

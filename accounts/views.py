@@ -73,4 +73,3 @@ def registration(request):
 def user_profile(request):
     user = User.objects.get(username=request.user.username)
     return render(request, 'profile.html', {'profile': user})
-

@@ -122,7 +122,7 @@ This when implemented allowed the site to send the e-mail and I was able to then
 <p>Automated testing was done by Travis-CL, there were a lot of errors during the build but they all seemed to get 
 ironed out as I went over the code</p>
 <p>While tidying up code I seem to have effected the way the products are displayed when you are logged in they appear stretched, will fix
-if I have time</p>
+if I have time, If you try to add an item to the cart without entering a number you will get a value error, I must fix this also</p>
 
  
  
