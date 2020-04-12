@@ -47,15 +47,6 @@ form{
     margin: 5%;
 }
 
-/*.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 100vh;
-}
-
-.carousel-caption {
-    top: 5%;*/
 
 /*-------------------------------------------------login page---------------------------------------------------*/
 
@@ -172,6 +163,12 @@ p.password-reset{
 
 .product-container{
     margin-bottom: 50px;
+}
+
+#login-message{
+    background-color: #343a40;
+    text-align: center;
+    color: white;
 }
 
 

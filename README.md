@@ -12,8 +12,7 @@
 
 <p>
 This project has been deployed to heroku and can be viewed <a href="https://agri-e-store.herokuapp.com/" target="_blank">here.</a>
-The projects repository can be viewed <a href="https://github.com/johnj974/store" target="_blank">here.</a><br>
-<img src="static/css/images/screenshot.png" alt="responsive images of site">
+The projects repository can be viewed <a href="https://github.com/johnj974/store" target="_blank">here.</a>
 </p>
 
 

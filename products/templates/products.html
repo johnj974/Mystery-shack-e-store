@@ -4,7 +4,13 @@
 {% block title %}Products{% endblock %}
 
 {% block content %}
-
+<div id="login-message">
+{% if user.is_authenticated %}
+<p>Welcome {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+<p>Please register or log in to purchase products</p>
+{% endif %}
+</div>
 
 {% for product in products %}
 <div class= "container-fluid product-container">
