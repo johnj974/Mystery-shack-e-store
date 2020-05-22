@@ -31,7 +31,7 @@ STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
 STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['agri-e-store.herokuapp.com', 'localhost']
 
