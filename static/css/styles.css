@@ -25,6 +25,8 @@ body, html {
     margin-top: 1%;
 }
 
+
+
 .col{
     padding: 0;
 }
@@ -54,6 +56,7 @@ form{
 
 #profilerow{
     margin-right: 0;
+    margin-left:0;
 }
 
 /*-------------------------------------------------login page---------------------------------------------------*/

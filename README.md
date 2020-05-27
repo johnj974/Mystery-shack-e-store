@@ -5,8 +5,7 @@
     <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1><a id="user-content-your-projects-name" class="anchor" aria-hidden="true" href="#your-projects-name"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
     </a>Mystery Shack</h1>
 
-<p>The Mystery Shack is an e-commerce site which allows customers to purchase wacky online goods, It was originally going to be an agristore for
-  the farming industry but because farmers have no money the owners decided to concentrate on the weird and wonderful,
+<p>The Mystery Shack is an e-commerce site which allows customers to purchase wacky online goods, the owners decided to concentrate on the weird and wonderful,
   Unfortunately there are not many products for sale at the moment but hopefully enough to give customers the idea of what the
   future site can become. Customers can browse the products on the site, the site has all the functions of an e-commerce site with the customer once they are registered be able to add products to their cart and proceed to
  a checkout area where they can amend their order or they can proceed to a payment area where they can enter delivery and payment options using
@@ -17,7 +16,10 @@ This project has been deployed to heroku and can be viewed <a href="https://agri
 The projects repository can be viewed <a href="https://github.com/johnj974/store" target="_blank">here.</a>
 </p>
 
-
+<h2>Resubmission</h2>
+<p>This is a resubmission of my project MysteryShack, The major issue addressed with this submission is the password reset functionallity
+which seems to have been resolved with the creation of a new google account with certain security features disabled being used as the base/gateway e-mail
+for the site, Debug mode is now also set to false,</p>
 <h2><a id="user-content-ux" class="anchor" aria-hidden="true" href="#ux"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
 </a>UX</h2>
 <p>The idea for the user experience is to have a site that is easy to navigate around, I did not achieve that goal with this design, the lack of a 
@@ -47,10 +49,7 @@ located in the navbar to help customers look for items, when a customer adds ite
 there is a counter on the cart which gives them a visual clue as to the amount of products that they have added, the customer
 clicks on the cart to access the cart page where they can amend each item in their shopping cart before moving onto the checkout page, 
 there is a list at the top of the page again confirming the products for purchase before the customer enters delivery and payment details,
-Customers can also request a new password through the login page, an e mail is sent to their address which they use to reset their password,
-According to all the youtube tutorials and the methods shown in the code institute module this should have been easy to implement but for
-some reason it took me a lot of time to get right. If the SMPTA authentication failure appears you may have to go to <a href="https://accounts.google.com/DisplayUnlockCaptcha" target="_blank">Captcha</a> 
-and click on continue to enable the authentication</p>
+Customers can also request a new password through the login page, an e mail is sent to their address which they use to reset their password</p>
 <p>As an admin user you have the option of adding, deleting and updating products. Unfortunately this is not fully functional as I
  have yet to figure out how to add an image to the new created product from the dashboard</p>
  <p>To access the site as a superuser use; username:admin, password:o1234567</p>
@@ -118,12 +117,13 @@ has been verified with a test card and all transactions show up on the Stripe da
 generated all the same problems, I traced the main problem back to my user registration form not recording the users email
 in the database for some reason, I reverted back to a django class for the creation of a new user and that seemed to fix
 that issue, I then had a problem with the SMTPA authentication even though I adjusted my google settings it would still given
-me that failure, Many many hours later and changes to my code resulted in coming across this <a href="https://accounts.google.com/DisplayUnlockCaptcha" target="_blank">Captcha</a>
-This when implemented allowed the site to send the e-mail and I was able to then confirm that the password reset function worked.
+me that failure.
+<p>This is a resubmission of my project MysteryShack, The major issue addressed with this submission is the password reset functionallity
+which seems to have been resolved with the creation of a new google account with security features disabled being used as the base/gateway e-mail
+for the site, Debug mode is now also set to false,</p>
 <p>Automated testing was done by Travis-CL, there were a lot of errors during the build but they all seemed to get 
 ironed out as I went over the code</p>
-<p>While tidying up code I seem to have effected the way the products are displayed when you are logged in they appear stretched, will fix
-if I have time, If you try to add an item to the cart without entering a number you will get a value error, I must fix this also</p>
+<p></p>
 
  
  
