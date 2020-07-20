@@ -41,7 +41,7 @@ def login(request):
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
         login_form = LoginForm()    # creates an instance of the form
-    return render(request, 'login.html', {'login_form': login_form})    # form passed in for rendering to page
+    return render(request, 'login.html', {'login_form': login_form})
 
 
 # function for registration

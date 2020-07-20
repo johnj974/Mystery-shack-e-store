@@ -5,46 +5,46 @@
 
 {% block content %}
 <div id="login-message">
-{% if user.is_authenticated %}
-<p>Welcome {{ user.username }}. Thanks for logging in.</p>
-{% else %}
-<p>Please register or log in to purchase products</p>
-{% endif %}
+	{% if user.is_authenticated %}
+	<p>Welcome {{ user.username }}. Thanks for logging in.</p>
+	{% else %}
+	<p>Please register or log in to purchase products</p>
+	{% endif %}
 </div>
 
 {% for product in products %}
-<div class= "container-fluid product-container">
-<div class="card mb-3" style="max-width: 90%;">
-	<div class="row no-gutters">
-		<div class="col-md-4">
-			<img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" class="card-img" alt="{{ product.name }}">
+<div class="container-fluid product-container">
+	<div class="card mb-3" style="max-width: 90%;">
+		<div class="row no-gutters">
+			<div class="col-md-4">
+				<img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" class="card-img" alt="{{ product.name }}">
     </div>
-			<div class="col-md-4">
-				<div class="card-body">
-					<h5 class="card-title">{{ product.name }}</h5>
-					<p class="card-text">{{ product.description }}</p>
-					<p class="card-text">&#8364;{{ product.price }}</p>
-                    {% if request.user.is_superuser %}
-                    <a class="btn" href="{% url 'update_product' product.id %}">Update Product</a>
-                    <a class="btn" href="{% url 'delete_product' product.id %}">Delete Product</a>
-                    {% endif %}
+				<div class="col-md-4">
+					<div class="card-body">
+						<h5 class="card-title">{{ product.name }}</h5>
+						<p class="card-text">{{ product.description }}</p>
+						<p class="card-text">&#8364;{{ product.price }}</p>
+						{% if request.user.is_superuser %}
+						<a class="btn" href="{% url 'update_product' product.id %}">Update Product</a>
+						<a class="btn" href="{% url 'delete_product' product.id %}">Delete Product</a>
+						{% endif %}
+					</div>
 				</div>
-			</div>
-			{% if user.is_authenticated %}
-			<div class="col-md-4">
-				<form method="post" action="{% url 'add_to_cart' product.id %}">
-					{% csrf_token %}
-					<div class="input-group">
-						<input name="quantity" type="number" min="1" max="999" class="form-control" value="1">
-						<span class="input-group-btn">
+				{% if user.is_authenticated %}
+				<div class="col-md-4">
+					<form method="post" action="{% url 'add_to_cart' product.id %}">
+						{% csrf_token %}
+						<div class="input-group">
+							<input name="quantity" type="number" min="1" max="999" class="form-control" value="1">
+							<span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Add</button>
                         </span>
-					</div>
-				</form>
+						</div>
+					</form>
+				</div>
+				{% endif %}
 			</div>
-			{% endif %}
 		</div>
 	</div>
-</div>
-{% endfor %}
-{% endblock %}
+	{% endfor %}
+	{% endblock %}

@@ -1,5 +1,5 @@
 # import our base url pattern
-from django.conf.urls import url, include
+from django.conf.urls import url
 # import all_machinery function to be used in our url pattern
 from .views import all_products, createProduct, updateProduct, deleteProduct
 

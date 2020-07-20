@@ -7,16 +7,16 @@
 {% block content %}
 <div class="container-fluid">
 	<div class="row" id="profilerow">
-    <div class="col-4" id="side">
-    </div>
+		<div class="col-4" id="side">
+		</div>
 		<div class="col-8" id="form-side">
-            <h2>Login Form</h2>
+			<h2>Login Form</h2>
 			<form id="login" method="POST">
 				{% csrf_token %}
 				{{ login_form | as_bootstrap }}
 				<button class="btn" type="submit">Login</button>
 			</form>
-		    <p class="password-reset"><a href="{% url 'password_reset' %}">Reset Password</a></p>
+			<p class="password-reset"><a href="{% url 'password_reset' %}">Reset Password</a></p>
 		</div>
 	</div>
 </div>

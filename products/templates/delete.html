@@ -5,17 +5,17 @@
 {% block content %}
 <div class="container-fluid">
 	<div class="row">
-    <div class="col-4" id="side">
-    </div>
+		<div class="col-4" id="side">
+		</div>
 		<div class="col-8" id="form-side">
-            <h2>Delete Product</h2>
-            <p>Are you sure you want to delete {{ item }}</p>
-            <form action="{% url 'delete_product' item.id %}" method="POST">
-               {% csrf_token %}
-                <button class="btn" type="submit">Confirm</button>
-            </form>
-            <a href="{% url 'products' %}">Cancel</a>
-		</div>	
+			<h2>Delete Product</h2>
+			<p>Are you sure you want to delete {{ item }}</p>
+			<form action="{% url 'delete_product' item.id %}" method="POST">
+				{% csrf_token %}
+				<button class="btn" type="submit">Confirm</button>
+			</form>
+			<a href="{% url 'products' %}">Cancel</a>
+		</div>
 	</div>
 </div>
 {% endblock %}

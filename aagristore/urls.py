@@ -23,7 +23,6 @@ from accounts.views import index
 from products import urls as urls_products
 # import the media root from settings
 from .settings import MEDIA_ROOT
-# import cart functions
 from cart import urls as urls_cart
 from checkout import urls as urls_checkout
 from accounts import urls as urls_accounts

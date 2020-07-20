@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 # import the machinery object from models so we can render to our view
 from .models import Product
 from .forms import ProductForm
-# import to restrict users accessing create/update/delete functionallity from the url
+# import to restrict users accessing create/update/delete functionallity
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponseNotFound
 
 
 # view to render to machinery.html

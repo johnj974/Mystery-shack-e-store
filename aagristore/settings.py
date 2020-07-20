@@ -78,8 +78,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',  # added to handle media images
-                'cart.contexts.cart_contents', # added to enable showing of cart on all pages
+                # added to handle media images
+                'django.template.context_processors.media',
+                # added to enable showing of cart on all pages
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -104,7 +106,8 @@ else:
     }
 
 
-# DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+# DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 
 # Password validation
@@ -125,15 +128,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#AUTHENTICATION_BACKENDS = [
+# AUTHENTICATION_BACKENDS = [
 #    'django.contrib.auth.backends.ModelBackend',
-#   'accounts.backends.CaseInsensitiveAuth'
-#]
+#   'accounts.backends.CaseInsensitiveAuth']
 
-#AUTHENTICATION_BACKENDS = [
+# AUTHENTICATION_BACKENDS = [
 #    'django.contrib.auth.backends.ModelBackend',
-#    'accounts.backends.EmailAuth',
-#]
+#    'accounts.backends.EmailAuth',]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
