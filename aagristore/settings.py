@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'checkout',
     'search',
     'storages',
-    'rare_items',
 ]
 
 MIDDLEWARE = [
