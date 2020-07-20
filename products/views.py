@@ -16,13 +16,16 @@ def all_products(request):
 @login_required
 def createProduct(request):
     form = ProductForm()
-    if request.method == "POST":
-        form = ProductForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect(reverse('products'))
-    context = {'form': form}
+    if request.user.is_superuser:
+        if request.method == "POST":
+            form = ProductForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect(reverse('products'))
+        context = {'form': form}
     return render(request, "product_form.html", context)
+   
+
 
 @login_required
 def updateProduct(request, id):
