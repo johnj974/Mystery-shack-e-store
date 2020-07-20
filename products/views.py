@@ -4,6 +4,7 @@ from .models import Product
 from .forms import ProductForm
 # import to restrict users accessing create/update/delete functionallity from the url
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse, HttpResponseNotFound
 
 
 # view to render to machinery.html
@@ -23,29 +24,37 @@ def createProduct(request):
                 form.save()
                 return redirect(reverse('products'))
         context = {'form': form}
-    return render(request, "product_form.html", context)
+        return render(request, "product_form.html", context)
+    else:
+        return HttpResponseNotFound('<h1>Unauthorised Action, Please return to your previous page, you have 5 seconds to comply!</h1>')
    
 
 
 @login_required
 def updateProduct(request, id):
-    product = get_object_or_404(Product, pk=id)
-    form = ProductForm(instance=product)
+    if request.user.is_superuser:
+        product = get_object_or_404(Product, pk=id)
+        form = ProductForm(instance=product)
 
-    if request.method == "POST":
-        form = ProductForm(request.POST, instance=product)
-        if form.is_valid():
-            form.save()
-            return redirect(reverse('products'))
+        if request.method == "POST":
+            form = ProductForm(request.POST, instance=product)
+            if form.is_valid():
+                form.save()
+                return redirect(reverse('products'))
 
-    context = {'form': form}
-    return render(request, "product_form.html", context)
+        context = {'form': form}
+        return render(request, "product_form.html", context)
+    else:
+        return HttpResponseNotFound('<h1>Unauthorised Action, Please return to your previous page, you have 5 seconds to comply!!</h1>') 
 
 @login_required
 def deleteProduct(request, id):
-    product = get_object_or_404(Product, pk=id)
-    if request.method == "POST":
-        product.delete()
-        return redirect(reverse('products'))
-    context = {'item': product}
-    return render(request, "delete.html", context)
+    if request.user.is_superuser:
+        product = get_object_or_404(Product, pk=id)
+        if request.method == "POST":
+            product.delete()
+            return redirect(reverse('products'))
+        context = {'item': product}
+        return render(request, "delete.html", context)
+    else:
+        return HttpResponseNotFound('<h1>Unauthorised Action, Please return to your previous page, you have 5 seconds to comply!!!</h1>') 
