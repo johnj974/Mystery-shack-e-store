@@ -29,7 +29,6 @@ from accounts import urls as urls_accounts
 from search import urls as urls_search
 
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls,),
     url(r'^$', index, name='index'),
