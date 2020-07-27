@@ -45,5 +45,3 @@ def clean_password2(self):
     if password1 != password2:
         raise ValidationError("Passwords must match")
     return password2
-
-
